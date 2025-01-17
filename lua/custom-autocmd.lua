@@ -185,7 +185,7 @@ api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }
   desc = "togger line number",
   callback = function()
     if vim.wo.number then
-      vim.wo.relativenumber = true
+      vim.wo.relativenumber = false
     end
   end,
 })

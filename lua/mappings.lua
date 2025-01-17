@@ -80,6 +80,13 @@ keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 keymap.set("n", "^", "g^")
 keymap.set("n", "0", "g0")
 
+-- Ajouter les touches fléchées pour déplacer le curseur
+keymap.set("n", "<Up>", "k", { noremap = true })
+keymap.set("n", "<Down>", "j", { noremap = true })
+keymap.set("n", "<Left>", "h", { noremap = true })
+keymap.set("n", "<Right>", "l", { noremap = true })
+
+
 -- Do not include white space characters when using $ in visual mode,
 -- see https://vi.stackexchange.com/q/12607/15292
 keymap.set("x", "$", "g_")
@@ -174,10 +181,10 @@ keymap.set("n", "gB", '<cmd>call buf_utils#GoToBuffer(v:count, "backward")<cr>',
 })
 
 -- Switch windows
-keymap.set("n", "<left>", "<c-w>h")
-keymap.set("n", "<Right>", "<C-W>l")
-keymap.set("n", "<Up>", "<C-W>k")
-keymap.set("n", "<Down>", "<C-W>j")
+-- keymap.set("n", "<left>", "<c-w>h")
+-- keymap.set("n", "<Right>", "<C-W>l")
+-- keymap.set("n", "<Up>", "<C-W>k")
+-- keymap.set("n", "<Down>", "<C-W>j")
 
 -- Text objects for URL
 keymap.set({ "x", "o" }, "iu", "<cmd>call text_obj#URL()<cr>", { desc = "URL text object" })
