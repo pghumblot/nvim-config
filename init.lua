@@ -9,6 +9,9 @@
 -- Blog: https://jdhao.github.io/
 -- GitHub: https://github.com/jdhao
 -- StackOverflow: https://stackoverflow.com/users/6064933/jdhao
+--vim.g.python3_host_prog="/home/pghumblot/.pyenv/shims/python"
+vim.g.python3_host_prog="/home/pghumblot/.pyenv/versions/work/bin/python"
+-- vim.g.python3_host_prog = vim.trim(vim.fn.system("pyenv which python"))
 vim.loader.enable()
 
 local utils = require("utils")
